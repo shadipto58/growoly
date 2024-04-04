@@ -18,7 +18,7 @@ export function ThemeToggle() {
 
   // Function to set the theme to dark mode on initial render
   React.useEffect(() => {
-    setTheme("dark");
+    setTheme("light");
   }, []); // Empty dependency array ensures it runs only once on initial render
 
   const toggleTheme = () => {

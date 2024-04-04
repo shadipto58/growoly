@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaBars } from "react-icons/fa6";
+import { ThemeToggle } from "@/components/themeProvider/theme-toggle"
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -27,7 +28,7 @@ const Header = () => {
   console.log("MenuOpen is :", menuOpen);
 
   return (
-    <nav className="border-b sticky top-0 bg-[#304D30] dark:bg-transparent">
+    <nav className="border-b sticky top-0 z-50 bg-[#BFD8AF] dark:bg-transparent">
       <div className="container m-auto flex md:flex-row flex-col justify-between items-center md:gap-0 py-5">
         <div className="flex items-center justify-between md:w-auto w-full">
           <h1 className="text-3xl font-extrabold dark:text-primary">
@@ -41,7 +42,7 @@ const Header = () => {
           <Link href={"/"}>
             <Button
               variant={"ghost"}
-              className="font-bold text-base text-[#416D19]"
+              className="font-bold text-base text-primary"
             >
               Home
             </Button>
@@ -55,17 +56,17 @@ const Header = () => {
             </Button>
           </Link>
           <Link href={"/"}>
-            <Button variant={"ghost"} className="font-bold text-base">
+            <Button variant={"ghost"} className="font-bold text-base text-primary">
               Team
             </Button>
           </Link>
           <Link href={"/"}>
-            <Button variant={"ghost"} className="font-bold text-base">
+            <Button variant={"ghost"} className="font-bold text-base text-primary">
               Contact
             </Button>
           </Link>
           <Link href={"/"}>
-            <Button variant={"ghost"} className="font-bold text-base">
+            <Button variant={"ghost"} className="font-bold text-base text-primary">
               Contact us
             </Button>
           </Link>
@@ -83,28 +84,28 @@ const Header = () => {
                 <Link href={"/"}>
                   <Button
                     variant={"ghost"}
-                    className="font-bold text-base text-red-500"
+                    className="font-bold text-base text-primary"
                   >
                     Home
                   </Button>
                 </Link>
                 <Link href={"/"}>
-                  <Button variant={"ghost"} className="font-bold text-base">
+                  <Button variant={"ghost"} className="font-bold text-base text-primary">
                     About
                   </Button>
                 </Link>
                 <Link href={"/"}>
-                  <Button variant={"ghost"} className="font-bold text-base">
+                  <Button variant={"ghost"} className="font-bold text-base text-primary">
                     Team
                   </Button>
                 </Link>
                 <Link href={"/"}>
-                  <Button variant={"ghost"} className="font-bold text-base">
+                  <Button variant={"ghost"} className="font-bold text-base text-primary">
                     Contact
                   </Button>
                 </Link>
                 <Link href={"/"}>
-                  <Button variant={"ghost"} className="font-bold text-base">
+                  <Button variant={"ghost"} className="font-bold text-base text-primary">
                     Contact us
                   </Button>
                 </Link>
@@ -113,9 +114,12 @@ const Header = () => {
           )}
         </AnimatePresence>
 
-        <Link href={"/"} className="hidden md:block">
+            <div>
+            <ThemeToggle></ThemeToggle>
+            </div>
+        {/* <Link href={"/"} className="hidden md:block">
           <Button>Get in touch</Button>
-        </Link>
+        </Link> */}
       </div>
       {/* <div className={`h-screen w-full bg-black bg-opacity-[0.1] backdrop-blur-sm fixed inset-0`}>
       </div> */}

@@ -1,0 +1,89 @@
+import { Button } from "@/components/ui/button";
+import Image from "next/image";
+import React from "react";
+import Groth_icon from "../../../assets/icons/growth.png";
+import Partner_icon from "../../../assets/icons/handshake.png";
+import Support_icon from "../../../assets/icons/support.png";
+import Service_icon from "../../../assets/icons/services0.png";
+
+const AboutUs = () => {
+  return (
+    <div className="py-16  lg:py-20 mt-20 bg-[#F3F8FF]">
+      <div className="container mx-auto py-10">
+        <div className="flex flex-col-reverse items-center justify-between lg:flex-row">
+          <div className="relative lg:w-1/2">
+            <Image
+              className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
+              src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
+              alt="op"
+              width={500}
+              height={500}
+            />
+          </div>
+          <div className="mb-10 lg:max-w-lg lg:pr-5 lg:mb-0 space-y-8">
+            <div className="max-w-xl mb-6">
+              <div>
+                <p className="inline-block px-3 py-px mb-4 text-lg bg-[#BFD8AF] font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
+                  About us
+                </p>
+              </div>
+              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+                The quick, brown fox
+                <br className="hidden md:block" />
+                jumps over{" "}
+                <span className="inline-block text-deep-purple-accent-400">
+                  a lazy dog
+                </span>
+              </h2>
+              <p className="text-base text-gray-700 md:text-lg">
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
+                quae. explicabo.
+              </p>
+            </div>
+            <div className="grid grid-cols-2 gap-5">
+              <div className="flex items-center justify-center gap-3 p-3 bg-[#E1F0DA] rounded-lg border border-[#BFD8AF] shadow-md hover:shadow-lg">
+                <Image
+                  src={Groth_icon}
+                  alt="Groth_icon"
+                  width={30}
+                  height={30}
+                />
+                <p className="font-semibold"> Grow Business</p>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-3 bg-[#E1F0DA] rounded-lg border border-[#BFD8AF] shadow-md hover:shadow-lg">
+                <Image
+                  src={Partner_icon}
+                  alt="Groth_icon"
+                  width={30}
+                  height={30}
+                />
+                <p className="font-semibold">Trusted Partner</p>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-3 bg-[#E1F0DA] rounded-lg border border-[#BFD8AF] shadow-md hover:shadow-lg">
+                <Image
+                  src={Service_icon}
+                  alt="Groth_icon"
+                  width={30}
+                  height={30}
+                />
+                <p className="font-semibold">Excellent Service</p>
+              </div>
+              <div className="flex items-center justify-center gap-3 p-3 bg-[#E1F0DA] rounded-lg border border-[#BFD8AF] shadow-md hover:shadow-lg">
+                <Image
+                  src={Support_icon}
+                  alt="Groth_icon"
+                  width={30}
+                  height={30}
+                />
+                <p className="font-semibold">24/7 Support</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default AboutUs;

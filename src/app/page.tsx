@@ -19,49 +19,19 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 import { ThemeToggle } from "@/components/themeProvider/theme-toggle"
+import HeroSection from "./components/HeroSection/HeroSection"
+import AboutUs from "./components/AboutUs/AboutUs"
+import Services from "./components/Services/Services"
+import OurTeams from "./components/OurTeams/OurTeams"
 
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div>
-        <h2 className="textt-3xl text-primary">Wellcome to Growoly</h2>
-        <ThemeToggle></ThemeToggle>
-        <Card className="w-[350px]">
-      <CardHeader>
-        <CardTitle>Create project</CardTitle>
-        <CardDescription>Deploy your new project in one-click.</CardDescription>
-      </CardHeader>
-      <CardContent>
-        <form>
-          <div className="grid w-full items-center gap-4">
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="name">Name</Label>
-              <Input id="name" placeholder="Name of your project" />
-            </div>
-            <div className="flex flex-col space-y-1.5">
-              <Label htmlFor="framework">Framework</Label>
-              <Select>
-                <SelectTrigger id="framework">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent position="popper">
-                  <SelectItem value="next">Next.js</SelectItem>
-                  <SelectItem value="sveltekit">SvelteKit</SelectItem>
-                  <SelectItem value="astro">Astro</SelectItem>
-                  <SelectItem value="nuxt">Nuxt.js</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
-          </div>
-        </form>
-      </CardContent>
-      <CardFooter className="flex justify-between">
-        <Button variant="outline">Cancel</Button>
-        <Button>Deploy</Button>
-      </CardFooter>
-    </Card>
-      </div>
+    <main className="">
+      <HeroSection/>
+      <AboutUs/>
+      <Services/>
+      <OurTeams/>
     </main>
   );
 }
