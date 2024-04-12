@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const HeroSection = () => {
@@ -25,17 +26,19 @@ const HeroSection = () => {
       <div className="relative flex flex-col items-start w-full md:px-0">
         <div className="mb-16 lg:my-40 lg:max-w-lg lg:pr-5">
           <h2 className="mb-5 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-5xl sm:leading-[1.2]">
-          Grow your buissness with our excellence.
+            Grow your buissness with our excellence.
           </h2>
           <p className="pr-5 mb-5 text-base text-gray-700 dark:text-[#FEFBF6] md:text-lg">
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-            quae. explicabo.
+            At grwoly we have highly qualified expert team for our services. we
+            are ready to make your dream project lives and make significant
+            growth in your business.
           </p>
           <div className="flex items-center">
-            <Button  className="bg-[#BFD8AF] text-black font-semibold hover:bg-transparent hover:border-[#BFD8AF] hover:border hover:shadow-md">
-              Get Started
-            </Button>
+            <Link href="/contact">
+              <Button className="bg-[#BFD8AF] text-black font-semibold hover:bg-transparent hover:border-[#BFD8AF] hover:border hover:shadow-md">
+                Get Started
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

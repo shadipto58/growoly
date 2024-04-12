@@ -11,7 +11,7 @@ const AboutUs = () => {
     <div className="py-16  lg:py-20 mt-20 bg-[#F3F8FF]">
       <div className="container mx-auto py-10">
         <div className="flex flex-col-reverse items-center justify-between lg:flex-row">
-          <div className="relative lg:w-1/2">
+          <div className="relative lg:w-1/2 border-2 border-dashed border-[#BFD8AF] rounded-md p-2 shadow-lg ">
             <Image
               className="object-cover w-full h-56 rounded shadow-lg sm:h-96"
               src="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=3&amp;h=750&amp;w=1260"
@@ -28,17 +28,14 @@ const AboutUs = () => {
                 </p>
               </div>
               <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
-                The quick, brown fox
-                <br className="hidden md:block" />
-                jumps over{" "}
-                <span className="inline-block text-deep-purple-accent-400">
-                  a lazy dog
-                </span>
+                We are Growoly your growth partner.
               </h2>
               <p className="text-base text-gray-700 md:text-lg">
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa
-                quae. explicabo.
+                Welcome to our digital hub! We are more than just a web services
+                agency, we are your go-to partner for comprehensive digital
+                solutions designed to grow your business. We offer experienced
+                company consultation, appealing graphic design, lead generation,
+                effective digital marketing techniques, and SEO services.
               </p>
             </div>
             <div className="grid grid-cols-2 gap-5">

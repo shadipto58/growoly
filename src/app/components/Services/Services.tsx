@@ -4,6 +4,7 @@ import Marketing_icon from "../../../assets/icons/digitalmarketing.png";
 import Graphic_icon from "../../../assets/icons/graphic.png";
 import Consulting_icon from "../../../assets/icons/consulting.png";
 import Image from "next/image";
+import Link from "next/link";
 
 const Services = () => {
   return (
@@ -15,31 +16,7 @@ const Services = () => {
           </p>
         </div>
         <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold leading-none tracking-tight text-gray-900 sm:text-4xl md:mx-auto">
-          <span className="relative inline-block">
-            <svg
-              viewBox="0 0 52 24"
-              fill="currentColor"
-              className="absolute top-0 left-0 z-0 hidden w-32 -mt-8 -ml-20 text-blue-gray-100 lg:w-32 lg:-ml-28 lg:-mt-10 sm:block"
-            >
-              <defs>
-                <pattern
-                  id="18302e52-9e2a-4c8e-9550-0cbb21b38e55"
-                  x="0"
-                  y="0"
-                  width=".135"
-                  height=".30"
-                >
-                  <circle cx="1" cy="1" r=".7" />
-                </pattern>
-              </defs>
-              <rect
-                fill="url(#18302e52-9e2a-4c8e-9550-0cbb21b38e55)"
-                width="52"
-                height="24"
-              />
-            </svg>
-            <span className="relative"></span>
-          </span>
+          
           Explore Our best Expertise
         </h2>
         <p className="text-base text-gray-700 md:text-lg">
@@ -55,17 +32,17 @@ const Services = () => {
             </div>
             <h6 className="mb-2 font-semibold leading-5">Web Devlopment</h6>
             <p className="mb-3 text-sm text-gray-900">
-              A flower in my garden, a mystery in my panties. Heart attack never
-              stopped old Big Bear.
+              We specialise in creating custom web solutions to help your
+              business succeed in the digital sphere...
             </p>
           </div>
-          <a
-            href="/"
+          <Link
+            href="/services/web-devlopment"
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
             Learn more
-          </a>
+          </Link>
         </div>
         <div className="flex flex-col justify-between p-5 border-2 border-[#BFD8AF] rounded-lg shadow-md">
           <div>
@@ -74,12 +51,12 @@ const Services = () => {
             </div>
             <h6 className="mb-2 font-semibold leading-5">Graphic Design</h6>
             <p className="mb-3 text-sm text-gray-900">
-              A flower in my garden, a mystery in my panties. Heart attack never
-              stopped old Big Bear.
+              Growoly &lsquo;s creative arena, where graphic design crosses borders to
+              visually capture and transmit your brands soul...
             </p>
           </div>
           <a
-            href="/"
+            href="/services/graphic-design"
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
@@ -99,11 +76,11 @@ const Services = () => {
             <h6 className="mb-2 font-semibold leading-5">Digital Marketing</h6>
             <p className="mb-3 text-sm text-gray-900">
               A flower in my garden, a mystery in my panties. Heart attack never
-              stopped old Big Bear.
+              stopped old Big Bear...
             </p>
           </div>
           <a
-            href="/"
+            href="/services/digital-marketing"
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
@@ -120,14 +97,16 @@ const Services = () => {
                 width={50}
               />
             </div>
-            <h6 className="mb-2 font-semibold leading-5">Buisness Consulting</h6>
+            <h6 className="mb-2 font-semibold leading-5">
+              Buisness Consulting
+            </h6>
             <p className="mb-3 text-sm text-gray-900">
               A flower in my garden, a mystery in my panties. Heart attack never
-              stopped old Big Bear.
+              stopped old Big Bear...
             </p>
           </div>
           <a
-            href="/"
+            href="/services/buisness-consulting"
             aria-label=""
             className="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
           >
