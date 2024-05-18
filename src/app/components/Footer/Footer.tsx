@@ -10,7 +10,7 @@ import {
 
 const Footer = () => {
   return (
-    <main className="pt-16 bg-[#BFD8AF]">
+    <main className="pt-16 bg-[#BFD8AF] dark:bg-[#040D12]">
       <div className="mx-auto container">
         <div className="grid gap-10 row-gap-6 mb-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="sm:col-span-2">
@@ -25,12 +25,12 @@ const Footer = () => {
               </h1>
             </Link>
             <div className="mt-6 lg:max-w-sm">
-              <p className="text-sm text-gray-800">
+              <p className="text-sm text-gray-800 dark:text-gray-200">
                 At grwoly we have highly qualified expert team for our
                 services.we are ready to make your dream project lives and make
                 significant growth in your business.
               </p>
-              <p className="mt-4 text-sm text-gray-800">
+              <p className="mt-4 text-sm text-gray-800 dark:text-gray-200">
                 We offer experienced company consultation, appealing graphic
                 design, lead generation, effective digital marketing techniques,
                 and SEO services.
@@ -38,49 +38,61 @@ const Footer = () => {
             </div>
           </div>
           <div className="space-y-2 text-sm">
-            <p className="text-base font-bold tracking-wide text-[#0C0C0C]">
+            <p className="text-base font-bold tracking-wide text-[#0C0C0C] dark:text-primary">
               Contacts
             </p>
             <div className="flex">
-              <p className="mr-1 text-gray-800 font-medium">Phone:</p>
+              <p className="mr-1 text-gray-800 dark:text-gray-200 font-medium">Phone :</p>
               <a
-                href=" https://wa.me/+8801796692501"
+                href="tel:+8801796692501"
                 target="_blank"
                 aria-label="Our phone"
                 title="Our phone"
-                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-primary"
               >
                 +880 17966 92501
               </a>
             </div>
             <div className="flex">
-              <p className="mr-1 text-gray-800 font-medium">Email:</p>
+              <p className="mr-1 text-gray-800 dark:text-gray-200 font-medium">WhatsApp :</p>
+              <a
+                href=" https://wa.me/+8801796692501"
+                target="_blank"
+                aria-label="Our phone"
+                title="Our phone"
+                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-primary"
+              >
+                +880 17966 92501
+              </a>
+            </div>
+            <div className="flex">
+              <p className="mr-1 text-gray-800 dark:text-gray-200  font-medium">Email :</p>
               <a
                 href="mailto:info@growoly.com"
                 target="_blank"
                 aria-label="Our email"
                 title="Our email"
-                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-primary"
               >
                 info@growoly.com
               </a>
             </div>
             <div className="flex">
-              <p className="mr-1 text-gray-800 font-medium">Address:</p>
+              <p className="mr-1 text-gray-800 dark:text-gray-200  font-medium">Address :</p>
               <a
                 href="https://www.google.com/maps"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Our address"
                 title="Our address"
-                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-deep-purple-800"
+                className="transition-colors duration-300 text-deep-purple-accent-400 hover:text-primary"
               >
                 Dhaka-1206, Bangladesh
               </a>
             </div>
           </div>
           <div>
-            <span className="text-base font-bold tracking-wide text-gray-900">
+            <span className="text-base font-bold tracking-wide text-gray-900 dark:text-primary">
               Social
             </span>
             <div className="flex items-center mt-1 space-x-3">
@@ -89,7 +101,7 @@ const Footer = () => {
                   href="https://www.linkedin.com/company/growoly/"
                   target="_blank"
                 >
-                  <FaLinkedin className="text-3xl hover:text-[#1B4242]" />
+                  <FaLinkedin className="text-3xl dark:hover:text-primary" />
                 </a>
               </div>
               <div className="">
@@ -97,29 +109,29 @@ const Footer = () => {
                   href="https://www.facebook.com/growoly?mibextid=ZbWKwL"
                   target="_blank"
                 >
-                  <FaSquareFacebook className="text-3xl" />
+                  <FaSquareFacebook className="text-3xl dark:hover:text-primary" />
                 </a>
               </div>
               <div className="">
                 <a href="#">
-                  <FaSquareGithub className="text-3xl" />
+                  <FaSquareGithub className="text-3xl dark:hover:text-primary" />
                 </a>
               </div>
               <div className="">
                 <a href="#">
-                  <FaSquareTwitter className="text-3xl" />
+                  <FaSquareTwitter className="text-3xl dark:hover:text-primary" />
                 </a>
               </div>
               <div className="">
                 <a href="#">
-                  <FaSquareInstagram className="text-3xl" />
+                  <FaSquareInstagram className="text-3xl dark:hover:text-primary" />
                 </a>
               </div>
             </div>
           </div>
         </div>
         <div className="flex justify-center py-5 border-t">
-          <p className="text-sm text-gray-600 font-semibold">
+          <p className="text-sm text-gray-600 dark:text-primary font-semibold">
             © Copyright 2024. All rights reserved by Growoly.
           </p>
         </div>

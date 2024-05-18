@@ -58,8 +58,8 @@ const Header = () => {
   };
 
   return (
-    <nav className=" sticky top-0 z-50 bg-[#BFD8AF] dark:bg-transparent shadow-md">
-      <div className="container m-auto flex md:flex-row flex-col justify-between items-center md:gap-0 py-5">
+    <nav className=" sticky top-0 z-50 bg-[#BFD8AF] dark:bg-[#040D12] dark:bg-opacity-[0.9] dark:backdrop-blur-md shadow-md">
+      <div className="container mx-auto flex md:flex-row flex-col justify-between items-center md:gap-0 py-5">
         <div className="flex items-center justify-between md:w-auto w-full">
           <Link href="/">
             <h1 className="text-3xl font-extrabold dark:text-primary">
@@ -77,8 +77,8 @@ const Header = () => {
                 variant={"ghost"}
                 className={
                   pathname.startsWith(`/${navlink.link}`)
-                    ? "bg-[#FEFAE0] font-extrabold hover:bg-[#FEFAE0]"
-                    : "font-bold text-base text-primary hover:bg-[#FEFAE0]"
+                    ? "bg-[#FEFAE0] font-extrabold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:bg-[#092635] dark:hover:bg-[#092635]"
+                    : "font-bold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:hover:bg-[#092635]"
                 }
               >
                 {navlink.name}
@@ -91,23 +91,11 @@ const Header = () => {
               variant={"ghost"}
               className={
                 pathname.startsWith(`/home`)
-                  ? "bg-[#FEFAE0] font-extrabold hover:bg-[#FEFAE0]"
-                  : "font-bold text-base text-primary hover:bg-[#FEFAE0]"
+                  ? "bg-[#FEFAE0] font-extrabold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:hover:bg-[#092635]"
+                  : "font-bold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:hover:bg-[#092635]"
               }
             >
               Home
-            </Button>
-          </Link>
-          <Link href="/about">
-            <Button
-              variant={"ghost"}
-              className={
-                pathname.startsWith(`/about`)
-                  ? "bg-[#FEFAE0] font-extrabold hover:bg-[#FEFAE0]"
-                  : "font-bold text-base text-primary hover:bg-[#FEFAE0]"
-              }
-            >
-              About
             </Button>
           </Link>
 
@@ -117,8 +105,8 @@ const Header = () => {
                 variant={"ghost"}
                 className={
                   pathname.startsWith(`/services`)
-                    ? "bg-[#FEFAE0] font-extrabold hover:bg-[#FEFAE0]"
-                    : "font-bold text-base text-primary hover:bg-[#FEFAE0]"
+                    ? "bg-[#FEFAE0] font-extrabold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:bg-[#092635] dark:hover:bg-[#092635]"
+                    : "font-bold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:hover:bg-[#092635]"
                 }
               >
                 Services
@@ -127,28 +115,28 @@ const Header = () => {
             </Link>
             <div className="hidden group-hover:block w-max absolute top-[100%] left-1/2 -translate-x-1/2">
               <div className="h-1 w-full bg-transparent"></div>
-              <div className="flex flex-col gap-2 p-3 rounded-lg bg-white border border-[#BFD8AF] shadow-md">
+              <div className="flex flex-col gap-2 p-3 rounded-lg bg-white dark:bg-[#040D12] border-[1px] border-[#BFD8AF] shadow-md">
                 <Link
                   href="/services/web-devlopment"
-                  className="text-sm font-medium hover:underline text-primary"
+                  className="text-sm font-medium hover:underline text-primary dark:text-gray-200 dark:hover:text-primary"
                 >
                   Web Devlopment
                 </Link>
                 <Link
                   href="/services/graphic-design"
-                  className="text-sm font-medium hover:underline text-primary"
+                  className="text-sm font-medium hover:underline text-primary dark:text-gray-200 dark:hover:text-primary"
                 >
                   Graphic Design
                 </Link>
                 <Link
                   href="/services/digital-marketing"
-                  className="text-sm font-medium hover:underline text-primary"
+                  className="text-sm font-medium hover:underline text-primary dark:text-gray-200 dark:hover:text-primary"
                 >
                   Digital Marketing
                 </Link>
                 <Link
                   href="/services/buisness-consulting"
-                  className="text-sm font-medium hover:underline text-primary"
+                  className="text-sm font-medium hover:underline text-primary dark:text-gray-200 dark:hover:text-primary"
                 >
                   Buisness Consulting
                 </Link>
@@ -156,18 +144,32 @@ const Header = () => {
             </div>
           </div>
 
+          <Link href="/about">
+            <Button
+              variant={"ghost"}
+              className={
+                pathname.startsWith(`/about`)
+                  ? "bg-[#FEFAE0] font-extrabold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:bg-[#092635] dark:hover:bg-[#092635]"
+                  : "font-bold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:hover:bg-[#092635]"
+              }
+            >
+              About
+            </Button>
+          </Link>
+
           <Link href="/contact">
             <Button
               variant={"ghost"}
               className={
                 pathname.startsWith(`/contact`)
-                  ? "bg-[#FEFAE0] font-extrabold hover:bg-[#FEFAE0]"
-                  : "font-bold text-base text-primary hover:bg-[#FEFAE0]"
+                  ? "bg-[#FEFAE0] font-extrabold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:bg-[#092635] dark:hover:bg-[#092635]"
+                  : "font-bold text-base text-primary hover:text-primary hover:bg-[#FEFAE0] dark:hover:bg-[#092635]"
               }
             >
               Contact
             </Button>
           </Link>
+          <ThemeToggle></ThemeToggle>
         </div>
 
         <AnimatePresence>

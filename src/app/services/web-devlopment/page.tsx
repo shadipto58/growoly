@@ -4,6 +4,14 @@ import { Montserrat } from "next/font/google";
 import { MdStars } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Growoly - Web Devlopment Services",
+  description: `Growoly offers professional web development services to help businesses establish a strong online presence. Our team of experts specializes in creating custom websites that are responsive, user-friendly, and optimized for search engines.`,
+  keywords: ['Next.js', 'React', 'JavaScript',"Typescript", "web development", "web design" ,"responsive design"]
+};
 
 const montserrat = Montserrat({
   weight: ["400", "500", "700"],
