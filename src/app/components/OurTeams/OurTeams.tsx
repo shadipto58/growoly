@@ -22,14 +22,14 @@ const OurTeams = () => {
           <div>
             <div className="mb-4">
               <Image
-                className="h-[200px] w-[200px] rounded-full object-cover object-center mx-auto"
-                src={bichitro}
+                className="h-[200px] w-[200px] rounded-full object-cover object-center mx-auto boxglow"
+                src={"https://media.istockphoto.com/id/1490764451/photo/headshot-portrait-of-confident-handsome-mature-middle-age-businessman-at-office.webp?b=1&s=170667a&w=0&k=20&c=7ULkaoeTcq3NKaiw0anIFqG0JKXEvbaMHwUbT4BGl4Y="}
                 alt="Person"
                 height={200}
                 width={200}
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col items-center sm:text-center">
               <p className="text-xl font-bold">Bichitro Ghosh</p>
               <p className="text-gray-800 dark:text-[#78b64f] font-medium">
                 Founder & CEO
@@ -54,17 +54,18 @@ const OurTeams = () => {
               </div>
             </div>
           </div>
+
           <div>
             <div className="mb-4">
               <Image
                 className="h-[200px] w-[200px] rounded-full object-cover object-center mx-auto boxglow"
-                src={Shadipto}
+                src={"https://img.freepik.com/free-photo/handsome-man-smiling-happy-face-portrait-close-up_53876-146189.jpg"}
                 alt="Person"
                 width={200}
                 height={200}
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col items-center sm:text-center">
               <p className="text-xl font-bold">Shadipto Mojumder</p>
               <p className="text-gray-800 dark:text-[#78b64f] font-medium">
                 Full Stack Devloper
@@ -90,17 +91,18 @@ const OurTeams = () => {
               </div>
             </div>
           </div>
+          
           <div>
             <div className="mb-4">
               <Image
-                className="h-[200px] w-[200px] rounded-full object-cover object-center mx-auto"
-                src={avijit}
+                className="h-[200px] w-[200px] rounded-full object-cover object-center mx-auto boxglow"
+                src={"https://media.istockphoto.com/id/1919265357/photo/close-up-portrait-of-confident-businessman-standing-in-office.webp?b=1&s=170667a&w=0&k=20&c=oqGxMl_5U615KEe_uN42-4fjwHMrRfp9WFoOgraxw0o="}
                 alt="Person"
                 width={200}
                 height={200}
               />
             </div>
-            <div className="flex flex-col sm:text-center">
+            <div className="flex flex-col items-center sm:text-center">
               <p className="text-xl font-bold">Avijit Ghosh</p>
               <p className="text-gray-800 dark:text-[#78b64f] font-medium">
                 CMO & Senior Maneger
@@ -125,6 +127,7 @@ const OurTeams = () => {
               </div>
             </div>
           </div>
+
           {/* <div>
             <div className="mb-4">
               <Image

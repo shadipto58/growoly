@@ -1,26 +1,21 @@
+"use client"
+import { useTheme } from "next-themes";
 import Image from "next/image";
-import React from "react";
-import { Montserrat } from "next/font/google";
-import { MdStars } from "react-icons/md";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const montserrat = Montserrat({
-  weight: ["400", "500", "700"],
-  subsets: ["latin"],
-  variable: "--montserrat",
-  display: "swap",
-});
 
 const BuisnessConsulting = () => {
+  const { theme } = useTheme();
   return (
-    <main className="container mx-auto">
-      <div className="my-10 lg:my-20 flex flex-col lg:flex-row items-center justify-between gap-20">
+    <main className="">
+      <section className={`bg-white dark:bg-[#183D3D] ${theme == "light"? "":"dotstyle"}`}>
+      <div className="py-10 lg:py-20 flex flex-col lg:flex-row items-center justify-between gap-20 container">
         <div className="lg:w-1/2">
-          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl ">
+          <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-primary sm:text-4xl ">
             Buisness Consulting
           </h2>
-          <p className="text-base text-primary md:text-lg whitespace-normal lg:max-w-xl">
+          <p className="text-base text-primary dark:text-gray-200 md:text-lg whitespace-normal lg:max-w-xl">
             Our business consulting services offer comprehensive solutions to
             drive growth, efficiency, and success for your enterprise. Through
             strategic analysis, tailored advice, and hands-on support, we help
@@ -35,37 +30,37 @@ const BuisnessConsulting = () => {
           <section className="mt-8 grid grid-cols-2 gap-5">
             <div className="flex items-center gap-3">
               <div>
-                <FaRegCheckCircle className="text-2xl" />
+                <FaRegCheckCircle className="text-2xl dark:text-primary" />
               </div>
               <p className="font-semibold">Strategy Consulting</p>
             </div>
             <div className="flex items-center gap-3">
               <div>
-                <FaRegCheckCircle className="text-2xl" />
+                <FaRegCheckCircle className="text-2xl dark:text-primary" />
               </div>
               <p className="font-semibold">Management Consulting</p>
             </div>
             <div className="flex items-center gap-3">
               <div>
-                <FaRegCheckCircle className="text-2xl" />
+                <FaRegCheckCircle className="text-2xl dark:text-primary" />
               </div>
               <p className="font-semibold">Financial Consulting</p>
             </div>
             <div className="flex items-center gap-3">
               <div>
-                <FaRegCheckCircle className="text-2xl" />
+                <FaRegCheckCircle className="text-2xl dark:text-primary" />
               </div>
               <p className="font-semibold">Risk Management Consulting</p>
             </div>
             <div className="flex items-center gap-3">
               <div>
-                <FaRegCheckCircle className="text-2xl" />
+                <FaRegCheckCircle className="text-2xl dark:text-primary" />
               </div>
               <p className="font-semibold">IT Consulting</p>
             </div>
             <div className="flex items-center gap-3">
               <div>
-                <FaRegCheckCircle className="text-2xl" />
+                <FaRegCheckCircle className="text-2xl dark:text-primary" />
               </div>
               <p className="font-semibold">Operations Consulting</p>
             </div>
@@ -81,10 +76,11 @@ const BuisnessConsulting = () => {
           />
         </div>
       </div>
+      </section>
 
       {/* Step Section */}
-      <section>
-        <div className="py-16 mx-auto lg:py-20">
+      <section className="bg-white dark:bg-[#040D12] dark:text-[#4d9d30] md:py-20 py-10">
+        <div className="py-16 mx-auto lg:py-20 container">
           <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-20">
             <div>
               <p className="inline-block px-3 py-px mb-4 text-lg bg-[#BFD8AF] font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -122,11 +118,13 @@ const BuisnessConsulting = () => {
             </h2>
           </div>
           <div className="flex flex-col lg:flex-row gap-5">
-            <div className="p-5 lg:w-fit md:w-1/2 w-full mx-auto border-2 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg">
+            <div className={`p-5 dark:bg-[#1B4242] ${
+                                theme == "light" ? "" : "boxglow"
+                            } lg:w-[300px] md:w-1/2 w-full mx-auto border-2 dark:border hover:scale-110 transition-all duration-200 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg`}>
               <div className="flex items-center justify-between mb-6">
                 <p className="text-2xl font-bold">Step 1</p>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-200">
                 At first, We conduct a detailed assessment of the clients
                 present business condition, including strengths, weaknesses,
                 opportunities, and threats. Conduct in-depth analyses of
@@ -137,11 +135,13 @@ const BuisnessConsulting = () => {
             <div className="flex items-center justify-center">
               <FaArrowRightLong className="text-3xl lg:rotate-0 rotate-90" />
             </div>
-            <div className="p-5 lg:w-fit md:w-1/2 w-full mx-auto border-2 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg">
+            <div className={`p-5 dark:bg-[#1B4242] ${
+                                theme == "light" ? "" : "boxglow"
+                            } lg:w-[300px] md:w-1/2 w-full mx-auto border-2 dark:border hover:scale-110 transition-all duration-200 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg`}>
               <div className="flex items-center justify-between mb-6">
                 <p className="text-2xl font-bold">Step 2</p>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-200">
                 After that,Based on the assessment results, collaborate with the
                 client to create a specific strategy for addressing identified
                 issues and capitalizing on opportunities. Define specific
@@ -152,11 +152,13 @@ const BuisnessConsulting = () => {
             <div className="flex items-center justify-center">
               <FaArrowRightLong className="text-3xl lg:rotate-0 rotate-90" />
             </div>
-            <div className="p-5 lg:w-fit md:w-1/2 w-full mx-auto border-2 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg">
+            <div className={`p-5 dark:bg-[#1B4242] ${
+                                theme == "light" ? "" : "boxglow"
+                            } lg:w-[300px] md:w-1/2 w-full mx-auto border-2 dark:border hover:scale-110 transition-all duration-200 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg`}>
               <div className="flex items-center justify-between mb-6">
                 <p className="text-2xl font-bold">Step 3</p>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-200">
                 Third, We support the client in implementing the developed
                 strategy, providing guidance, resources, and expertise as
                 needed. Assist with project management, change management, and
@@ -167,11 +169,13 @@ const BuisnessConsulting = () => {
             <div className="flex items-center justify-center">
               <FaArrowRightLong className="text-3xl lg:rotate-0 rotate-90" />
             </div>
-            <div className="p-5 lg:w-fit md:w-1/2 w-full mx-auto border-2 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg">
+            <div className={`p-5 dark:bg-[#1B4242] ${
+                                theme == "light" ? "" : "boxglow"
+                            } lg:w-[300px] md:w-1/2 w-full mx-auto border-2 dark:border hover:scale-110 transition-all duration-200 border-[#BFD8AF] rounded-lg bg-[#EEEEEE] shadow-lg`}>
               <div className="flex items-center justify-between mb-6">
                 <p className="text-2xl font-bold">Step 4</p>
               </div>
-              <p className="text-gray-600">
+              <p className="text-gray-600 dark:text-gray-200">
                 At last we continuously monitor the progress of the implemented
                 initiatives, track key performance indicators, and evaluate
                 results against established objectives. Provide regular feedback
@@ -184,7 +188,7 @@ const BuisnessConsulting = () => {
       </section>
 
       {/* Meet Our Team */}
-      <section className="my-20">
+      {/* <section className="my-20">
         <div>
           <h2 className="text-center mb-3 font-sans text-3xl font-bold tracking-tight text-primary sm:text-3xl ">
             Meet Our Inovative Devloper Team
@@ -203,7 +207,7 @@ const BuisnessConsulting = () => {
                 viewBox="0 0 381.164 381.164"
                 xmlSpace="preserve"
               >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
                   id="SVGRepo_tracerCarrier"
                   stroke-linecap="round"
@@ -262,7 +266,7 @@ const BuisnessConsulting = () => {
             </p>
           </div>
         </section>
-      </section>
+      </section> */}
     </main>
   );
 };

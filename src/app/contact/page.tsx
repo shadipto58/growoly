@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { SlLocationPin } from "react-icons/sl";
@@ -10,40 +11,42 @@ import {
   FaTwitter,
   FaInstagram,
 } from "react-icons/fa6";
+import { useTheme } from "next-themes";
 
 const Contact = () => {
+  const { theme } = useTheme();
   return (
-    <main className="container mx-auto mt-20 mb-32">
-      <section className="flex flex-col lg:flex-row justify-between gap-10">
+    <main className={`bg-white dark:bg-[#183D3D] ${theme == "light"? "":"dotstyle"}`}>
+      <section className="flex flex-col lg:flex-row justify-between pt-20 pb-32 gap-10 container">
         <div className="lg:max-w-1/2 lg:text-left text-center">
           <p className="inline-block px-3 py-px mb-4 text-lg bg-[#BFD8AF] font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
             Contact with us
           </p>
-          <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+          <h2 className="mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-primary sm:text-4xl sm:leading-none">
             Let &lsquo;s work together grow together
           </h2>
-          <p className="text-base text-gray-700 md:text-lg whitespace-normal lg:max-w-lg">
+          <p className="text-base text-gray-700 dark:text-gray-200 md:text-lg whitespace-normal lg:max-w-lg">
             We are happy to answer any questions you may have regarding us or
             your project. Please let us know so that we can deliver the finest
             results for you or your project.
           </p>
           <section className="flex items-center gap-5 mb-8 mt-10">
-            <div className="h-[50px] w-[50px] bg-[#EEEEEE] rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+            <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] rounded-full flex items-center justify-center outline outline-[#5F6F52] dark:outline-primary cursor-pointer">
               <FiPhoneCall className="text-2xl" />
             </div>
-            <p className="font-semibold text-[#5F6F52]">+880 17966 92501</p>
+            <p className="font-semibold text-[#5F6F52] dark:text-primary">+880 17966 92501</p>
           </section>
           <section className="flex items-center gap-5 mb-8">
-            <div className="h-[50px] w-[50px] bg-[#EEEEEE] rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+            <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] rounded-full flex items-center justify-center outline outline-[#5F6F52] dark:outline-primary cursor-pointer">
               <HiOutlineMail className="text-2xl" />
             </div>
-            <p className="font-semibold text-[#5F6F52]">info@growoly.com</p>
+            <p className="font-semibold text-[#5F6F52] dark:text-primary">info@growoly.com</p>
           </section>
           <section className="flex items-center gap-5 mb-8">
-            <div className="h-[50px] w-[50px] bg-[#EEEEEE] rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+            <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] rounded-full flex items-center justify-center outline outline-[#5F6F52] dark:outline-primary cursor-pointer">
               <SlLocationPin className="text-2xl" />
             </div>
-            <p className="font-semibold text-[#5F6F52]">
+            <p className="font-semibold text-[#5F6F52] dark:text-primary">
               Dhaka-1206, Bangladesh
             </p>
           </section>
@@ -53,27 +56,27 @@ const Contact = () => {
             <h2 className="text-xl text-primary font-semibold">Follow Us</h2>
             <div className="flex items-center gap-5 mt-5">
               <Link href="#">
-                <div className="h-[50px] w-[50px] bg-[#EEEEEE] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+                <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] hover:outline-primary cursor-pointer">
                   <FaLinkedinIn className="text-2xl" />
                 </div>
               </Link>
               <Link href="#">
-              <div className="h-[50px] w-[50px] bg-[#EEEEEE] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+              <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] hover:outline-primary cursor-pointer">
                   <FaFacebookF className="text-2xl" />
                 </div>
               </Link>
               <Link href="#">
-              <div className="h-[50px] w-[50px] bg-[#EEEEEE] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+              <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] hover:outline-primary cursor-pointer">
                   <FaGithub className="text-2xl" />
                 </div>
               </Link>
               <Link href="#">
-              <div className="h-[50px] w-[50px] bg-[#EEEEEE] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+              <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] hover:outline-primary cursor-pointer">
                   <FaTwitter className="text-2xl" />
                 </div>
               </Link>
               <Link href="#">
-              <div className="h-[50px] w-[50px] bg-[#EEEEEE] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] cursor-pointer">
+              <div className="h-[50px] w-[50px] bg-[#EEEEEE] dark:bg-[#040D12] hover:bg-[#BFD8AF] text-primary hover:text-white transition-all duration-300 rounded-full flex items-center justify-center outline outline-[#5F6F52] hover:outline-primary cursor-pointer">
                   <FaInstagram className="text-2xl" />
                 </div>
               </Link>
@@ -83,7 +86,7 @@ const Contact = () => {
 
         {/* Form for Contact */}
         <div className="lg:w-1/2 bg-[#EEEEEE] shadow-lg p-10 rounded-lg">
-          <h2 className="text-3xl text-primary font-semibold text-center border-b border-primary pb-2 mb-5">
+          <h2 className="text-3xl text-primary dark:text-black font-semibold text-center border-b border-primary dark:border-black pb-2 mb-5">
             Make a Free Consulting
           </h2>
           <form>
@@ -148,7 +151,7 @@ const Contact = () => {
             <div className="mt-4 mb-2 sm:mb-4">
               <button
                 type="submit"
-                className="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-primary hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                className="inline-flex items-center justify-center w-full h-12 px-6 font-semibold tracking-wide text-white dark:text-black transition duration-200 rounded shadow-md bg-primary hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
               >
                 Submit
               </button>

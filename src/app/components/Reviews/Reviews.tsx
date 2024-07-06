@@ -1,14 +1,13 @@
 "use client";
-import React from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import ReviewCard from "../ReviewCard/ReviewCard";
 import ReviewList from "@/assets/slideData.json";
-import "../ReviewCard/ReviewCard.css"
 import { useTheme } from "next-themes";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
+import ReviewCard from "../ReviewCard/ReviewCard";
+import "../ReviewCard/ReviewCard.css";
 
-function SampleNextArrow(props:any) {
+function SampleNextArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -19,7 +18,7 @@ function SampleNextArrow(props:any) {
   );
 }
 
-function SamplePrevArrow(props:any) {
+function SamplePrevArrow(props: any) {
   const { className, style, onClick } = props;
   return (
     <div
@@ -41,13 +40,17 @@ const Reviews = () => {
     prevArrow: <SamplePrevArrow />,
     autoplay: true,
     autoplaySpeed: 2500,
-    cssEase: "linear"
+    cssEase: "linear",
   };
 
   const { theme } = useTheme();
 
   return (
-    <section className={`bg-white dark:bg-[#183D3D] ${theme == "light"? "":"dotstyle"} `}>
+    <section
+      className={`bg-white dark:bg-[#183D3D] ${
+        theme == "light" ? "" : "dotstyle"
+      } `}
+    >
       <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
         <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
           <div className="flex items-center gap-5 justify-center mb-6">
@@ -58,7 +61,7 @@ const Reviews = () => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g id="SVGRepo_bgCarrier" stroke-width="0">
+              <g id="SVGRepo_bgCarrier" strokeWidth="0">
                 <path
                   transform="translate(-2.4, -2.4), scale(0.8999999999999999)"
                   d="M16,30.996731773018837C19.000557400176444,30.713630396570963,20.917586199688174,27.894669527032672,23.31486919208192,26.06805370659314C25.64055851769215,24.295988861071873,29.618025903533997,23.40158934357524,29.79806340656598,20.4832625706638C29.989865970054044,17.37422947081666,24.985811869914695,16.354535152795883,24.098318295344882,13.368696879479154C23.166256438763163,10.232915343450218,27.049756292570905,6.242065857611824,24.846365636754427,3.82402227569375C22.804808649548306,1.5835780961733024,18.809345947065538,3.3434119618280866,16,4.4814455304294825C13.827043545454666,5.361685071937246,13.240847271673006,8.249565737591732,11.1767834861148,9.361411991770407C8.523124142386841,10.790854832555604,4.490037676885958,9.269669814341391,2.6619833351955666,11.666215676922299C0.878322143854078,14.004562929992936,1.9805977978681433,17.46309154664608,2.8550494729545193,20.271053332244197C3.738291178509887,23.10724088531967,5.306895609767,25.67196379053355,7.608473168996113,27.549945815342504C10.010205919233984,29.509649895378985,12.913905496156909,31.2879035405827,16,30.996731773018837"
@@ -71,7 +74,7 @@ const Reviews = () => {
                 stroke-linecap="round"
                 stroke-linejoin="round"
                 stroke="#CCCCCC"
-                stroke-width="0.096"
+                strokeWidth="0.096"
               ></g>
               <g id="SVGRepo_iconCarrier">
                 <path
@@ -85,15 +88,14 @@ const Reviews = () => {
             </h2>
           </div>
         </div>
-        
+
         <div className="py-5">
           <Slider {...settings}>
             {ReviewList.map((review, index) => (
-              <ReviewCard key={review.id} reviewData={review}/>
+              <ReviewCard key={review.id} reviewData={review} />
             ))}
           </Slider>
         </div>
-        
       </div>
     </section>
   );

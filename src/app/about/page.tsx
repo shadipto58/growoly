@@ -1,20 +1,23 @@
+"use client"
+import { useTheme } from "next-themes";
 import Image from "next/image";
-import React from "react";
+import { FiArrowDownCircle } from "react-icons/fi";
 
 const AboutPage = () => {
+  const { theme } = useTheme();
   return (
-    <main className="mx-auto container">
-      <div className="py-16  lg:py-20">
+    <main className={`bg-white dark:bg-[#183D3D] ${theme == "light"? "":"dotstyle"}`}>
+      <div className="py-16 lg:py-20 container">
         <div className="flex flex-col lg:flex-row-reverse items-center justify-between gap-10">
           <div className="flex flex-col justify-center">
             <div className="max-w-xl mb-6">
               <p className="inline-block px-3 py-px mb-4 text-lg bg-[#BFD8AF] font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
                 Who we are?
               </p>
-              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-none">
+              <h2 className="max-w-lg mb-6 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-primary sm:text-4xl sm:leading-none">
                 We are Growoly your growth partner.
               </h2>
-              <p className="text-base text-gray-700 md:text-lg whitespace-normal">
+              <p className="text-base text-gray-700 dark:text-gray-200 md:text-lg whitespace-normal">
                 Welcome to our digital hub! We are more than just a web services
                 agency, we are your go-to partner for comprehensive digital
                 solutions designed to grow your business. We offer experienced
@@ -63,8 +66,8 @@ const AboutPage = () => {
           Disscution
         </p>
         <div className="flex items-center gap-5 mb-6">
-          <h2 className="max-w-lg mb-1 font-sans text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl sm:leading-[50px]">
-            Steps toward Success 
+          <h2 className="max-w-lg mb-1 font-sans text-3xl font-bold tracking-tight text-gray-900 dark:text-primary sm:text-4xl sm:leading-[50px]">
+            Steps toward Success
             {/* <span className="text-3xl">
              Our Journey Toward Empowering the Web
           </span> */}
@@ -76,7 +79,7 @@ const AboutPage = () => {
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+            <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
             <g
               id="SVGRepo_tracerCarrier"
               stroke-linecap="round"
@@ -87,21 +90,21 @@ const AboutPage = () => {
               <rect
                 width="48"
                 height="48"
-                fill="white"
+                fill="red"
                 fill-opacity="0.01"
               ></rect>{" "}
               <path
                 d="M24 4L29.2533 7.83204L35.7557 7.81966L37.7533 14.0077L43.0211 17.8197L41 24L43.0211 30.1803L37.7533 33.9923L35.7557 40.1803L29.2533 40.168L24 44L18.7467 40.168L12.2443 40.1803L10.2467 33.9923L4.97887 30.1803L7 24L4.97887 17.8197L10.2467 14.0077L12.2443 7.81966L18.7467 7.83204L24 4Z"
                 fill="#2F88FF"
                 stroke="#000000"
-                stroke-width="4"
+                strokeWidth="4"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               ></path>{" "}
               <path
                 d="M17 24L22 29L32 19"
                 stroke="white"
-                stroke-width="4"
+                strokeWidth="4"
                 stroke-linecap="round"
                 stroke-linejoin="round"
               ></path>{" "}
@@ -113,9 +116,9 @@ const AboutPage = () => {
             <div className="flex">
               <div className="flex flex-col items-center mr-4">
                 <div>
-                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] rounded-full">
+                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] dark:border-primary rounded-full">
                     <svg
-                      className="w-4 text-gray-600"
+                      className="w-4 text-gray-600 dark:text-primary"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
@@ -138,11 +141,11 @@ const AboutPage = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="w-px h-full bg-gray-300" />
+                <div className="w-[2px] h-full bg-gray-300 dark:bg-primary" />
               </div>
               <div className="pt-1 pb-8">
-                <p className="mb-2 text-lg font-bold">Step 1</p>
-                <p className="text-gray-700">
+                <p className="mb-2 text-lg dark:text-primary font-bold">Step 1</p>
+                <p className="text-gray-700 dark:text-gray-200">
                   The first step in our journey begins with understanding your
                   unique vision,goals and problems . Through collaborative
                   discussions with our expert teams.
@@ -152,9 +155,9 @@ const AboutPage = () => {
             <div className="flex">
               <div className="flex flex-col items-center mr-4">
                 <div>
-                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] rounded-full">
+                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] dark:border-primary rounded-full">
                     <svg
-                      className="w-4 text-gray-600"
+                      className="w-4 text-gray-600 dark:text-primary"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
@@ -177,11 +180,11 @@ const AboutPage = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="w-px h-full bg-gray-300" />
+                <div className="w-[2px] h-full bg-gray-300 dark:bg-primary" />
               </div>
               <div className="pt-1 pb-8">
-                <p className="mb-2 text-lg font-bold">Step 2</p>
-                <p className="text-gray-700">
+                <p className="mb-2 text-lg dark:text-primary font-bold">Step 2</p>
+                <p className="text-gray-700 dark:text-gray-200">
                   We take the time to understand your objectives and problems
                   and develop a suitable solution for them.
                 </p>
@@ -190,9 +193,9 @@ const AboutPage = () => {
             <div className="flex">
               <div className="flex flex-col items-center mr-4">
                 <div>
-                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] rounded-full">
+                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] dark:border-primary rounded-full">
                     <svg
-                      className="w-4 text-gray-600"
+                      className="w-4 text-gray-600 dark:text-primary"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
@@ -215,11 +218,11 @@ const AboutPage = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="w-px h-full bg-gray-300" />
+                <div className="w-px h-full bg-gray-300 dark:bg-primary" />
               </div>
               <div className="pt-1 pb-8">
-                <p className="mb-2 text-lg font-bold">Step 3</p>
-                <p className="text-gray-700">
+                <p className="mb-2 text-lg dark:text-primary font-bold">Step 3</p>
+                <p className="text-gray-700 dark:text-gray-200">
                   After that we focuses on implementation. Once we have
                   developed a plan, we roll up our sleeves and put it into
                   action. From creation to deployment, we ensure that every
@@ -231,9 +234,9 @@ const AboutPage = () => {
             <div className="flex">
               <div className="flex flex-col items-center mr-4">
                 <div>
-                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] rounded-full">
+                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] dark:border-primary rounded-full">
                     <svg
-                      className="w-4 text-gray-600"
+                      className="w-4 text-gray-600 dark:text-primary"
                       stroke="currentColor"
                       strokeWidth="2"
                       strokeLinecap="round"
@@ -256,11 +259,11 @@ const AboutPage = () => {
                     </svg>
                   </div>
                 </div>
-                <div className="w-px h-full bg-gray-300" />
+                <div className="w-px h-full bg-gray-300 dark:bg-primary" />
               </div>
               <div className="pt-1 pb-8">
-                <p className="mb-2 text-lg font-bold">Step 4</p>
-                <p className="text-gray-700">
+                <p className="mb-2 text-lg dark:text-primary font-bold">Step 4</p>
+                <p className="text-gray-700 dark:text-gray-200">
                   In this step, We closely monitor the performance of our
                   solutions, gathering insights and feedback to fine-tune and
                   improve. We work hand-in-hand with you to evolve your digital
@@ -273,9 +276,9 @@ const AboutPage = () => {
             <div className="flex">
               <div className="flex flex-col items-center mr-4">
                 <div>
-                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] rounded-full">
+                  <div className="flex items-center justify-center w-10 h-10 border-2 border-[#BFD8AF] dark:border-primary rounded-full">
                     <svg
-                      className="w-6 text-gray-600"
+                      className="w-6 text-gray-600 dark:text-primary"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -292,7 +295,7 @@ const AboutPage = () => {
                 </div>
               </div>
               <div className="pt-1">
-                <p className="mb-2 text-lg font-bold">Success</p>
+                <p className="mb-2 text-lg dark:text-primary font-bold">Success</p>
                 <p className="text-gray-700" />
               </div>
             </div>
